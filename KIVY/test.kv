@@ -1,0 +1,486 @@
+ManejadordePantalla:
+    Bienvenido:
+    Login:
+    Createacount:
+    BienvenidoUser:
+    ElijeEltecnico:
+    ElijeElnombreDelasesor:
+    NumeroDeOrden:
+    TipoDeorden:
+    Vehiculo:
+    PiramideDelVehiculo:
+    Color1:
+    MenuBienvenida:
+
+<Bienvenido>
+    name: "bienvenido"
+    Button:
+        text: "Bienvenido a tu nuevo portal"
+        on_release: app.root.current="login"
+
+<Login>
+    name: "login"
+    BoxLayout: 
+        size:"100sp", "100sp"
+        orientation:"vertical"
+        Label:
+            id: Usuario
+            text:"Usuario"
+            size: "100sp", "100sp"
+        TextInput:
+            id: Ingresa_tu_usuario
+            text:"Ingresa tu usuario"
+        Label:
+            id: Contraseña
+            text:"Contraseña"
+            size: "100sp", "100sp"
+        TextInput:
+            id: Ingresa_tu_contraseña
+            text:"Ingresa tu contraseña"
+        Button:
+            text:"Ingresar"
+            size: "100sp", "100sp"
+            on_release: app.root.current="MenuBienvenida"
+        Button:
+            text:"Crear Cuenta"
+            size: "100dp", "100dp"
+            on_release: root.iniciar_sesion="Crear"
+
+<Createacount>
+    name: "creat"
+    BoxLayout: 
+        size:"100sp", "100sp"
+        orientation:"vertical"
+        Label:
+            id: Nombre y Apellido
+            text:"Nombre y Apellido"
+            size: "100sp", "100sp"
+        TextInput:
+            id: Ingresa_tu_Nombre
+            text:"Ingresa tu Nombre"
+        TextInput:
+            id: Ingresa_tu_Apellido
+            text:"Ingresa_tu_Apellido"
+        Label:
+            id: Correo Electronico
+            text:"Correo Electronico"
+        TextInput:
+            id: Ingresa_tu_correo_electronico
+            text:"Ingresa tu correo electronico"
+        Label:
+            id: Contraseña
+            text:"Contraseña"
+            size: "100sp", "100sp"
+        TextInput:
+            id: Ingresa_tu_contraseña
+            text:"Ingresa tu contraseña"
+        Button:
+            text:"Crear Cuenta"
+            size: "100sp", "100sp"
+            on_release: root.crear_cuenta()
+        Button:
+            text:"Regresar"
+            size: "100dp", "100dp"
+            on_release: app.root.current="bienvenido"
+
+<BienvenidoUser>
+    name: "BienvenidoUser"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Fecha"
+            TextInput:
+                id: fecha_text
+                text:"09/05/2022"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Elije El tecnico"
+            TextInput:
+                id: tecnico_text
+                text:"1"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Apellido_tecnico"
+            TextInput:
+                id: apellido_text
+                text:"Apellido_tecnico"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Elije El nombre Del asesor"
+            TextInput:
+                id: asesor_text
+                text:"1"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Numero De Orden"
+            TextInput:
+                id: orden_text
+                text:"Numero De Orden"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Vehiculo"
+            TextInput:
+                id: vehiculo_text
+                text:"Vehiculo"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Estado"
+            TextInput:
+                id: estado_text
+                text:"1"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Color1"
+            TextInput:
+                id: color1_text
+                text:"Color1"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Fecha_orden_servicio"
+            TextInput:
+                id: fecha_orden_text
+                text:"21/06/2022"
+        Button:
+            text: "guardar_orden "
+            on_release: root.guardar_orden()
+
+<ElijeEltecnico>
+    name: "ElijeEltecnico"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            Label:
+                text:"nombre_del_tecnico"
+            TextInput:
+                id: tecnico_text
+                text:"nombre_del_tecnico"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"apellido"
+            TextInput:
+                id: apellido_text
+                text:"apellido_del_tecnico"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"numero_de_orden"
+            TextInput:
+                id: orden_text
+                text:"numero_de_orden"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"asesor"
+            TextInput:
+                id: asesor_text
+                text:"asesor"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"vehiculo"
+            TextInput:
+                id: vehiculo_text
+                text:"vehiculo"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"color1"
+            TextInput:
+                id: color1_text
+                text:"color1"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"tipo_de_orden"
+            TextInput:
+                id: orden_text
+                text:"tipo_de_orden"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"estado"
+            TextInput:
+                id: estado_text
+                text:"estado"
+        Button:
+            text:"Continuar"
+            on_release: app.root.current = "ElijeElnombreDelasesor"
+        Button:
+            text:"Regresar"
+            on_release: app.root.current = "MenuBienvenida"
+
+<ElijeElnombreDelasesor>
+    name: "ElijeElnombreDelasesor"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            Label:
+                text:"nombre_del_asesor"
+            TextInput:
+                id: asesor_text
+                text:"nombre_del_asesor"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"apellido"
+            TextInput:
+                id: apellido_text
+                text:"apellido_del_asesor"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"numero_de_orden"
+            TextInput:
+                id: orden_text
+                text:"numero_de_orden"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"vehiculo"
+            TextInput:
+                id: vehiculo_text
+                text:"vehiculo"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"cliente"
+            TextInput:
+                id: cliente_text
+                text:"cliente"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"fecha"
+            TextInput:
+                id: fecha_text
+                text:"fecha"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"piezas"
+            TextInput:
+                id: piezas_text
+                text:"piezas"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"precio"
+            TextInput:
+                id: precio_text
+                text:"precio"
+        Button:
+            text: "Continuar"
+            on_release: app.root.current = "Vehiculo"
+        Button:
+            text: "Regresar"
+            on_release: app.root.current = "MenuBienvenida"
+
+<Vehiculo>
+    name: "Vehiculo"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            Label:
+                text:"nombre_del_vehiculo"
+            TextInput:
+                id: vehiculo_text
+                text: "nombre_del_vehiculo"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"color1"
+            TextInput:
+                id: color1_text
+                text:"color1"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"modelo"
+            TextInput:
+                id: modelo_text
+                text:"modelo"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"marca"
+            TextInput:
+                id: marca_text
+                text:"marca"
+        Button:
+            text: "Continuar"
+            on_release: app.root.current = "PiramideDelVehiculo"
+        Button:
+            text: "Regresar"
+            on_release: app.root.current = "MenuBienvenida"
+
+<PiramideDelVehiculo>
+    name: "PiramideDelVehiculo"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"color_de_la_piramide"
+            TextInput:
+                id: piramide_text
+                text:"color_de_la_piramide"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"numero_de_la_piramide"
+            TextInput:
+                id: numero_text
+                text:"numero_de_la_piramide"
+        Button:
+            text: "Continuar"
+            on_release: app.root.current = "TipoDeorden"
+        Button:
+            text: "Regresar"
+            on_release: app.root.current = "MenuBienvenida"
+
+<TipoDeorden>
+    name: "TipoDeorden"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"letras_de_la_orden"
+            TextInput:
+                id: letras_text
+                text:"letras_de_la_orden"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"vehiculo"
+            TextInput:
+                id: vehiculo_text
+                text:"vehiculo"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"descripcion_de_la_falla"
+            TextInput:
+                id: descripcion_text
+                text:"descripcion_de_la_falla"
+        Button:
+            text: "Continuar"
+            on_release: app.root.current = "NumeroDeOrden"
+        Button:
+            text: "Regresar"
+            on_release: app.root.current = "MenuBienvenida"
+
+<NumeroDeOrden>
+    name: "NumeroDeOrden"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Guardar todos los numeros de las ordenes"
+            TextInput:
+                id: guardar_orden_text
+                text:"Guardar_todos_los_numeros_de_las_ordenes"
+        Button:
+            text: "Continuar"
+            on_release: app.root.current = "Color1"
+        Button:
+            text: "Regresar"
+            on_release: app.root.current = "MenuBienvenida"
+
+<Color1>
+    name: "Color1"
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"todos_los_colores"
+            TextInput:
+                id: color1_text
+                text:"color1"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"codigo"
+            TextInput:
+                id: codigo_text
+                text:"codigo"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"nombre del color"
+            TextInput:
+                id: nombre_text
+                text:"nombre_del_color"
+        BoxLayout:
+            orientation:"horizontal"
+            Label:
+                text:"Años"
+            TextInput:
+                id: año_text
+                text:"años"
+        Button:
+            text: "Regresar"
+            on_release: app.root.current = "MenuBienvenida" 
+        Button:
+            text: "Continuar al BienvenidoUser"
+            on_release: app.root.current = "BienvenidoUser"
+     
+<MenuBienvenida>
+    name: "MenuBienvenida"
+    BoxLayout:
+        orientation:"vertical"
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            text:"nombres_mecanicos"
+        Button:
+            text: "nombre_del_tecnico"
+            on_release: app.root.current = "ElijeEltecnico"    
+        Label:
+            text:"asesores"
+        Button:
+            text: "nombre_del_asesor"
+            on_release: app.root.current = "ElijeElnombreDelasesor"
+        Label:
+            text:"Crear_orden"
+        Button:
+            text: "Crear_orden"
+            on_release: app.root.current = "BienvenidoUser"
+        Label:
+            text:"crear_vehiculo"
+        Button:
+            text:"crear_vehiculo"
+            on_release: app.root.current = "Vehiculo"
+        Label:
+            text:"PiramideDelVehiculo"
+        Button:
+            text:"piramide_del_vehiculo"
+            on_release: app.root.current = "PiramideDelVehiculo"
+        Label:
+            text:"letras_de_la_orden"
+        Button:
+            text:"letras_de_la_orden"
+            on_release: app.root.current = "TipoDeorden"
+        Label:
+            text:"guardar_todos_los_numeros_de_las_ordenes"
+        Button:
+            text:"guardar_todos_los_numeros_de_las_ordenes"
+            on_release: app.root.current = "NumeroDeOrden"
+        Label:
+            text:"todos_los_colores"
+        Button:
+            text:"todos_los_colores"
+            on_release: app.root.current = "Color1"
